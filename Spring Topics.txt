@@ -1,0 +1,64 @@
+STAGE 2
+ 
+Agile,solid principles,design patterns,dsa
+ 
+SPRINGCORE
+
+ 
+->What is springframework,why we are using spring?
+ 
+->MAVEN-definition,features,keyconcepts
+ 
+->Spring Bean Configuration,Life Cycle Methods of spring bean
+ 
+->Dependency injection(3 types), & what is Dependency Check, Inner beans and Scope(5 types),Aut
+owiring
+ 
+->Spring AOP (Aspect-Oriented Programming)---Definition,keyterms(6),annotations(6)
+ 
+->Spring MVC---Definition,process(architecture),Annotations
+ 
+->Spring ORM---Definition.annotations
+ 
+->Spring Boot (Introduction)---Definiton,why Spring Boot,Features(8),Annotations  
+ 
+ 
+->TDD(definition & process) JUnit(Def,Features(3),Annotation Mockito(Def,Need of mockito,Annotations)
+ 
+->Logging(Definition) What are SLF4J,LOG4J,LOMBOK (annotations)
+ 
+->Continuos code quality---SONARCUBE(Definition,sonarcube architecture)
+ 
+ 
+STAGE 3
+ 
+->Spring Data JPA with Spring Boot, Hibernate
+ 
+1.Introduction to Spring Data JPA, Setting Up a Spring Boot Project with Spring Data JPA
+2.Entity Mapping, Spring Data Repositories, CRUD Operations with Spring Data JPA
+3.Query Methods and Named Queries, Pagination and Sorting
+4.Auditing with Spring Data JPA, Spring Data JPA Projections
+5.Spring Data JPA and Spring Boot Integration, Spring Data JPA and Hibernate
+ 
+Spring REST using Spring Boot 3
+ 
+1.Introduction to Spring REST and Spring Boot 3, Building a Simple REST Controller
+2.Request and Response Handling, RESTful Resource Representation with DTOs
+3.RESTful HATEOAS, Content Negotiation and Media Types
+4.Spring Boot Actuator for REST Monitoring, Security and Authentication in RESTful APIs
+5.Testing RESTful APIs, Documenting RESTful API
+ 
+ 
+GIT
+ 
+ 
+Debugging
+ 
+Microservices
+ 
+Introduction to Microservices Architecture (MSA), Spring Cloud for Microservices(config server,eureka server,api gateway)
+Microservices Communication with Spring Cloud, API Gateway and Edge Services
+Spring Cloud Config
+Monitoring and Metrics in Microservices
+Security Best Practices in Microservices
+has context menu

@@ -1,0 +1,61 @@
+Sure! Here are some key topics to prepare for a core Java interview:
+
+1. **Basic Concepts**:
+   - Data Types, Variables, and Operators
+   - Control Statements (if-else, switch, loops)
+
+2. **Object-Oriented Programming (OOP) Principles**:
+   - Classes and Objects
+   - Inheritance
+   - Polymorphism
+   - Encapsulation
+   - Abstraction
+
+3. **Core Java APIs**:
+   - Collections Framework (List, Set, Map, etc.)
+   - Generics
+   - String Class and String Manipulation
+   - Exception Handling
+
+4. **Advanced Concepts**:
+   - Multithreading and Concurrency
+   - Synchronization
+   - Java Memory Management (Garbage Collection, Heap and Stack)
+   - Input/Output (IO) and Serialization
+
+5. **Java 8 and Beyond**:
+   - Lambda Expressions
+   - Streams API
+   - Functional Interfaces
+   - Optional Class
+
+6. **JVM Internals**:
+   - Class Loaders
+   - JVM Memory Structure
+   - JIT Compiler
+
+7. **Design Patterns**:
+   - Singleton
+   - Factory
+   - Observer
+   - Decorator
+
+8. **Frameworks and Libraries**:
+   - Overview of popular frameworks like Spring and Hibernate
+
+9. **Java Collections and Generics**:
+   - ArrayList, LinkedList, HashMap, TreeMap, etc.
+   - Type Inference and Wildcards
+
+10. **Best Practices**:
+    - Code Optimization Techniques
+    - Writing Clean and Maintainable Code
+
+11. **Testing**:
+    - JUnit and Mockito
+
+12. **Miscellaneous**:
+    - Java Reflection API
+    - Networking (Sockets, HTTP)
+
+Preparing these topics should give you a comprehensive understanding of core Java concepts and help you excel in your interview. Happy studying!
