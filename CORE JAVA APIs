@@ -4,5 +4,160 @@
    - String Class and String Manipulation
    - Exception Handling
 
+Collections Framework (List, Set, Map, etc.) – Simplified Definitions with Examples
+
+The Java Collections Framework provides a set of interfaces and classes to store and manipulate groups of objects efficiently.
+
+
+---
+
+1. List (Ordered Collection, Allows Duplicates)
+
+Definition:
+
+A List is an ordered collection that allows duplicate elements. Elements are stored based on their insertion order, and each element can be accessed using an index.
+
+Common Implementations:
+
+ArrayList (Faster read operations, slow insert/delete in the middle)
+
+LinkedList (Faster insert/delete, slow access)
+
+
+Example: Using ArrayList
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        List<String> names = new ArrayList<>();
+        names.add("Alice");
+        names.add("Bob");
+        names.add("Alice"); // Allows duplicate
+        names.add("Charlie");
+
+        System.out.println(names); // Output: [Alice, Bob, Alice, Charlie]
+        System.out.println(names.get(1)); // Access by index: Bob
+    }
+}
+
+Explanation:
+
+ArrayList<String> names = new ArrayList<>(); → Creates a List of strings.
+
+add() → Adds elements to the list.
+
+get(1) → Retrieves an element by its index.
+
+
+
+---
+
+2. Set (Unique Collection, No Duplicates, No Indexing)
+
+Definition:
+
+A Set is a collection that does not allow duplicate elements. Unlike List, it does not support indexing (no get(index) method).
+
+Common Implementations:
+
+HashSet (Unordered, fastest for insert and search)
+
+TreeSet (Sorted in natural order, slower than HashSet)
+
+LinkedHashSet (Maintains insertion order)
+
+
+Example: Using HashSet
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Set<Integer> numbers = new HashSet<>();
+        numbers.add(10);
+        numbers.add(20);
+        numbers.add(10); // Duplicate, ignored
+        numbers.add(30);
+
+        System.out.println(numbers); // Output: [10, 20, 30] (No duplicates, order may vary)
+    }
+}
+
+Explanation:
+
+HashSet<Integer> numbers = new HashSet<>(); → Creates a Set of integers.
+
+add(10) → Adds elements, but duplicate 10 is ignored.
+
+Order is not guaranteed in a HashSet.
+
+
+
+---
+
+3. Map (Key-Value Pair, Unique Keys, Fast Lookup)
+
+Definition:
+
+A Map is a collection that stores data as key-value pairs. Keys must be unique, but values can be duplicated.
+
+Common Implementations:
+
+HashMap (Fastest, unordered)
+
+TreeMap (Sorted by keys)
+
+LinkedHashMap (Maintains insertion order)
+
+
+Example: Using HashMap
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Map<Integer, String> students = new HashMap<>();
+        students.put(1, "Alice");
+        students.put(2, "Bob");
+        students.put(3, "Charlie");
+        students.put(1, "David"); // Overwrites previous value
+
+        System.out.println(students); // Output: {1=David, 2=Bob, 3=Charlie}
+        System.out.println(students.get(2)); // Output: Bob
+    }
+}
+
+Explanation:
+
+HashMap<Integer, String> students = new HashMap<>(); → Creates a Map with integer keys and string values.
+
+put(1, "Alice") → Adds a key-value pair.
+
+put(1, "David") → Overwrites the value for key 1.
+
+get(2) → Retrieves the value of key 2 (Bob).
+
+
+
+---
+
+Comparison Table: List vs Set vs Map
+
+
+---
+
+Final Summary:
+
+Use List when order matters and duplicates are allowed (e.g., ArrayList for fast access, LinkedList for frequent insert/delete).
+
+Use Set when you need unique elements (e.g., HashSet for fast lookups, TreeSet for sorted order).
+
+Use Map when you need key-value pairs (e.g., HashMap for fast access, TreeMap for sorting keys).
+
+
+Would you like code examples for any specific use cases?
+
+
 
    
