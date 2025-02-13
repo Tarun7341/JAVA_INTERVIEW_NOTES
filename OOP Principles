@@ -5,5 +5,187 @@
    - Encapsulation
    - Abstraction
 
+1. Classes and Objects
+
+Definition:
+A class is a blueprint for creating objects. An object is an instance of a class that has specific values and behaviors.
+
+Example:
+
+class Car {  
+    String brand = "Toyota";  
+    void honk() {  
+        System.out.println("Beep Beep!");  
+    }  
+}  
+
+public class Main {  
+    public static void main(String[] args) {  
+        Car myCar = new Car(); // Creating an object  
+        System.out.println(myCar.brand); // Accessing object data  
+        myCar.honk(); // Calling object method  
+    }  
+}
+
+Explanation:
+
+Car is a class that defines the properties (brand) and behaviors (honk()).
+
+myCar is an object of the Car class. It can access the properties and methods of the class.
+
+
+
+---
+
+2. Inheritance
+
+Definition:
+Inheritance allows a class to acquire the properties and behaviors of another class, reducing code duplication.
+
+Example:
+
+class Animal {  
+    void makeSound() {  
+        System.out.println("Animal makes a sound");  
+    }  
+}  
+
+class Dog extends Animal {  
+    void bark() {  
+        System.out.println("Dog barks");  
+    }  
+}  
+
+public class Main {  
+    public static void main(String[] args) {  
+        Dog myDog = new Dog();  
+        myDog.makeSound(); // Inherited method  
+        myDog.bark();  
+    }  
+}
+
+Explanation:
+
+Dog inherits from Animal using extends, so it gets access to makeSound().
+
+The Dog class can also have its own methods like bark().
+
+
+
+---
+
+3. Polymorphism
+
+Definition:
+Polymorphism allows the same method to behave differently based on the object that calls it. It can be method overriding (inherited method is changed) or method overloading (same method name with different parameters).
+
+Example (Method Overriding):
+
+class Animal {  
+    void makeSound() {  
+        System.out.println("Animal makes a sound");  
+    }  
+}  
+
+class Cat extends Animal {  
+    @Override  
+    void makeSound() {  
+        System.out.println("Meow");  
+    }  
+}  
+
+public class Main {  
+    public static void main(String[] args) {  
+        Animal myAnimal = new Cat();  
+        myAnimal.makeSound(); // Calls overridden method from Cat  
+    }  
+}
+
+Explanation:
+
+Even though myAnimal is declared as Animal, the overridden method in Cat is executed.
+
+
+
+---
+
+4. Encapsulation
+
+Definition:
+Encapsulation is the practice of restricting direct access to class data by making fields private and using getters and setters to access them.
+
+Example:
+
+class Person {  
+    private String name; // Private variable  
+
+    // Setter method  
+    void setName(String newName) {  
+        name = newName;  
+    }  
+
+    // Getter method  
+    String getName() {  
+        return name;  
+    }  
+}  
+
+public class Main {  
+    public static void main(String[] args) {  
+        Person p = new Person();  
+        p.setName("John");  
+        System.out.println(p.getName());  
+    }  
+}
+
+Explanation:
+
+The name variable is private, so it cannot be accessed directly.
+
+We use setName() to assign a value and getName() to retrieve it.
+
+
+
+---
+
+5. Abstraction
+
+Definition:
+Abstraction hides the implementation details and shows only the necessary functionality. It can be achieved using abstract classes or interfaces.
+
+Example (Abstract Class):
+
+abstract class Vehicle {  
+    abstract void start(); // Abstract method  
+}  
+
+class Bike extends Vehicle {  
+    @Override  
+    void start() {  
+        System.out.println("Bike is starting...");  
+    }  
+}  
+
+public class Main {  
+    public static void main(String[] args) {  
+        Vehicle myBike = new Bike();  
+        myBike.start();  
+    }  
+}
+
+Explanation:
+
+Vehicle is an abstract class with an abstract method start().
+
+Bike provides the actual implementation of start(), hiding unnecessary details.
+
+
+
+---
+
+Summary:
+
+Would you like a deeper explanation of any of these?
+
 
    
