@@ -1,0 +1,57 @@
+ public void assignDeveloperToProject(Integer projectId, Integer userId) {
+        // Fetch the user details
+        User user = userServiceClient.getUserById(userId);
+        if (user == null) {
+            throw new RuntimeException("User not found");
+        }
+
+        // Assign the user to the project
+        user.setProjectId(projectId);
+        userServiceClient.updateUser(userId, user);
+    }
+
+    /**
+     * ✅ Remove Developer from a Project
+     */
+    public void removeDeveloperFromProject(Integer userId) {
+        // Fetch the user details
+        User user = userServiceClient.getUserById(userId);
+        if (user == null) {
+            throw new RuntimeException("User not found");
+        }
+
+        // Remove project assignment
+        user.setProjectId(null);
+        userServiceClient.updateUser(userId, user);
+    }
+
+    /**
+     * ✅ Assign Developer to a Ticket
+     */
+    public void assignDeveloperToTicket(Integer ticketId, Integer userId) {
+        // Fetch the ticket details
+        Ticket ticket = ticketServiceClient.getTicketById(ticketId);
+        if (ticket == null) {
+            throw new RuntimeException("Ticket not found");
+        }
+
+        // Assign the developer to the ticket
+        ticket.setAssignedTo(userId);
+        ticketServiceClient.updateTicket(ticketId, ticket);
+    }
+
+    /**
+     * ✅ Remove Developer from a Ticket
+     */
+    public void removeDeveloperFromTicket(Integer ticketId) {
+        // Fetch the ticket details
+        Ticket ticket = ticketServiceClient.getTicketById(ticketId);
+        if (ticket == null) {
+            throw new RuntimeException("Ticket not found");
+        }
+
+        // Remove developer assignment
+        ticket.setAssignedTo(null);
+        ticketServiceClient.updateTicket(ticketId, ticket);
+    }
+}
