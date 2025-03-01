@@ -45,12 +45,6 @@ public class SecurityConfig {
                         .authenticated())
                 .authorizeHttpRequests(requests -> requests.requestMatchers("/api/projects/**")
                         .authenticated())
-                .authorizeHttpRequests(requests -> requests.requestMatchers("/api/admin/**")
-                        .authenticated())
-                .authorizeHttpRequests(requests -> requests.requestMatchers("/api/developer/**")
-                        .authenticated())
-                .authorizeHttpRequests(requests -> requests.requestMatchers("/api/tester/**")
-                        .authenticated())
                 .sessionManagement(management -> management
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authenticationProvider(authenticationProvider())
