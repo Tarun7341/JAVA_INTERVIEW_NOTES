@@ -117,3 +117,7 @@ TESTER
 ✅ DELETE /api/tickets/delete/{id} (Delete a ticket)
 ✅ GET /api/tickets/getOne/{id} (View a specific ticket by ID)
 
+
+(method.equals("GET") && (path.equals("/api/projects/getAll") || 
+                                     path.equals("/api/tickets/getAll")));
+
