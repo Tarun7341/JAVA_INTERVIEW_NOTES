@@ -71,3 +71,49 @@ public class SecurityConfig {
     }
 
 }
+
+
+======================================================
+
+USER ROLES API segragation
+
+ROLE_ADMIN
+(Admins manage users, projects, and tickets.)
+
+User Management
+
+PUT /api/users/update/{id} (Update user)
+DELETE /api/users/delete/{id} (Delete user)
+
+Project Management
+
+POST /api/projects/addNew (Add project)
+PUT /api/projects/update/{id} (Update project)
+DELETE /api/projects/delete/{id} (Delete project)
+PUT /api/projects/removeUser/{id}/{userIdToRemove} (Remove user from project)
+
+Ticket Management
+
+
+PUT /api/tickets/update/{id} (Update ticket)
+PUT /api/tickets/removeUser/{id}/{userIdToRemove} (Remove user from ticket)
+
+
+==================================================================================
+
+DEVELOPER
+
+GET /api/projects/getProjectsByUserId/{userId} (View projects assigned to a
+
+GET /api/tickets/users/{id} (View tickets assigned to a user)
+
+PUT /api/tickets/update/{id}
+
+
+TESTER
+
+✅ POST /api/tickets/addNew (Add a new ticket)
+✅ PUT /api/tickets/update/{id} (Update a ticket)
+✅ DELETE /api/tickets/delete/{id} (Delete a ticket)
+✅ GET /api/tickets/getOne/{id} (View a specific ticket by ID)
+
