@@ -69,6 +69,39 @@ public class AuthenticationFilter extends AbstractGatewayFilterFactory<Authentic
 
     private Mono<Void> handleUnauthorized(ServerHttpResponse response, String message) {
         response.setStatusCode(HttpStatus.FORBIDDEN);
-        return response.setComplete();
+        return response.
+setComplete();
+    }
+}
+
+
+
+===============================================================================================
+
+private boolean isAuthorized(String role, String path, String method) {
+    switch (role) {
+        case "ROLE_ADMIN":
+            return (method.equals("PUT") && (path.matches("/api/users/update/\\d+") || 
+                                             path.matches("/api/projects/update/\\d+") || 
+                                             path.matches("/api/tickets/update/\\d+") || 
+                                             path.matches("/api/projects/removeUser/\\d+/\\d+") || 
+                                             path.matches("/api/tickets/removeUser/\\d+/\\d+"))) ||
+                   (method.equals("POST") && path.equals("/api/projects/addNew")) ||
+                   (method.equals("DELETE") && (path.matches("/api/users/delete/\\d+") || 
+                                                path.matches("/api/projects/delete/\\d+")));
+
+        case "ROLE_DEVELOPER":
+            return (method.equals("GET") && (path.matches("/api/projects/getProjectsByUserId/\\d+") || 
+                                             path.matches("/api/tickets/users/\\d+"))) ||
+                   (method.equals("PUT") && path.matches("/api/tickets/update/\\d+"));
+
+        case "ROLE_TESTER":
+            return (method.equals("POST") && path.equals("/api/tickets/addNew")) ||
+                   (method.equals("PUT") && path.matches("/api/tickets/update/\\d+")) ||
+                   (method.equals("DELETE") && path.matches("/api/tickets/delete/\\d+")) ||
+                   (method.equals("GET") && path.matches("/api/tickets/getOne/\\d+"));
+
+        default:
+            return false;
     }
 }
