@@ -119,5 +119,20 @@ TESTER
 
 
 (method.equals("GET") && (path.equals("/api/projects/getAll") || 
+                        path.equals("/api/tickets/getAll")));
+
+
+
+case "ROLE_ADMIN":
+    return (method.equals("PUT") && (path.matches("/api/users/update/\\d+") || 
+                                     path.matches("/api/projects/update/\\d+") || 
+                                     path.matches("/api/tickets/update/\\d+") || 
+                                     path.matches("/api/projects/removeUser/\\d+/\\d+") || 
+                                     path.matches("/api/tickets/removeUser/\\d+/\\d+"))) ||
+           (method.equals("POST") && path.equals("/api/projects/addNew")) ||
+           (method.equals("DELETE") && (path.matches("/api/users/delete/\\d+") || 
+                                        path.matches("/api/projects/delete/\\d+"))) ||
+           (method.equals("GET") && (path.equals("/api/projects/getAll") || 
                                      path.equals("/api/tickets/getAll")));
+
 
